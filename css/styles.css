@@ -1,28 +1,116 @@
+body {
+  max-width: 768px;
+  font-family: Roboto;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-.body {
-  max-width: 768px;
+/* header */
+.head__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head__container img {
+  height: 36px;
+  width: 197px;
+}
+.head__container p {
+  background: #EAEAEA;
+  text-align: center;
+  height: 50px;
+  width: 100%;
 }
 
-.restaurants-cards {
+/* presentation */
+.info__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info__container .info__head__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.info__container .info__head__text {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+.info__container .info__head__button {
+  justify-content: center;
+}
+
+/* fonctionnement de l'application */
+.fonction__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.fonction__container .fonction__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.fonction__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  background: #F6F6F6;
+  border-radius: 20px;
+  width: 90%;
+  margin: 2%;
+}
+
+/* liste des restaurants */
+.restaurant__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  background: #F3F3F3;
 }
-.restaurants-cards .card {
+.restaurant__container .card {
+  width: 90%;
+  margin-top: 4%;
+  height: 241px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  height: 400px;
-  width: 400px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.restaurants-cards .card a img {
+.restaurant__container .card .card__content__img {
+  border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 70%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+.card__content .card__content__title {
+  margin: 0%;
+}
+.card__content .card__content__description {
+  margin: 0%;
+}
+.card__content i {
+  width: 22px;
+  height: 21px;
+  border: 1px;
 }
 
 footer {
