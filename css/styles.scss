@@ -19,7 +19,7 @@ a {
     flex-direction: column;
     align-items: center;
 
-    img {
+    .head__logo {
         height: 36px;
         width: 197px;
     }
@@ -110,22 +110,22 @@ a {
 
 .card__content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
 
-    .card__content__title {
-        margin: 0%;
+    .card__text {
+
+        .card__content__title {
+            margin: 0%;
+        }
+
+        .card__content__description {
+            margin: 0%;
+        }
     }
 
-    .card__content__description {
-        margin: 0%;
-    }
-
-    i {
-        width: 22px;
-        height: 21px;
-        border: 1px;
-
-    }
 }
 
 footer {
@@ -143,4 +143,24 @@ footer {
         font-weight: 500;
         font-size: 16px;
     }
+}
+
+
+/* Cacher l'icône remplie par défaut */
+.menu__btn i.fas.fa-heart {
+    display: none;
+}
+
+/* Lorsque la case à cocher (input) est cochée, changez l'apparence de l'icône */
+.hidden-radio:checked + .menu__btn i.fas.fa-heart {
+    display: inline;
+}
+
+/* Cacher l'icône vide lorsque la case à cocher (input) est cochée */
+.hidden-radio:checked + .menu__btn i.far.fa-heart {
+    display: none;
+}
+
+#heart {
+    display: none;
 }
