@@ -16,35 +16,38 @@
 <body>
     <div class="main">
         <header class="head__container">
-            <img src="./images/logo/ohmyfood.png" alt="Logo ohmyfood" class="head__logo">
-            <p>paris, belleville</p>
+            <h1 class="head__logo">ohmyfood</h1>
+            <nav class="location__point">
+                <p><i class="fa-solid fa-location-dot location__icon"></i>Paris, Belleville</p>
+            </nav>
         </header>
-        <div class="info__container">
-            <section class="info__head">
-                <h1 class="info__head__title">Réservez le menu qui vous convient</h1>
-                <p class="info__head__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-                <button class="info__head__button">Explorer nos restaurants</button>
-            </section>
+        <section class="info__head">
+            <h1 class="info__head__title">Réservez le menu qui vous convient</h1>
+            <p class="info__head__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+            <button class="info__head__button">Explorer nos restaurants</button>
+        </section>
 
-            <section class="fonction__container">
-                <h1 class="fonction__title">Fonctionnement</h1>
-                <div class="fonction__card">
-                    <p class="fonction__card__number">1</p>
-                    <div class="fonction__card__content">
-                        <i class="fonction__card__content__icone"></i>
-                        <p class="fonction__card__content__text">Choisissez un restaurant</p>
-                    </div>
-                </div>
-                <div class="fonction__card">
-                    <p class="fonction__card__number">2</p>
-                    <p class="fonction__card__text">Composez votre menu</p>
-                </div>
-                <div class="fonction__card">
-                    <p class="fonction__card__number">3</p>
-                    <p class="fonction__card__text">Dégustez au restaurant</p>
-                </div>
-            </section>
-        </div>
+        <section class="function__main">
+            <h1 class="function__title">Fonctionnement</h1>
+            <ul class="function__container">
+                <li class="function__card">
+                    <div class="function__card__number">1</div>
+                    <i class="fa-solid fa-mobile-screen-button function__card__content__icon"></i>
+                    <p>Choisissez un restaurant</p>
+                </li>
+                <li class="function__card">
+                    <div class="function__card__number">2</div>
+                    <div class="tets"><i class="fa-solid fa-list-ul function__card__content__icon"></i></div>
+                    <p>Composez votre menu</p>
+                </li>
+                <li class="function__card">
+                    <div class="function__card__number">3</div>
+                    <i class="fa-solid fa-store function__card__content__icon"></i>
+                    <p>Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </section>
+
         <section class="restaurant__container">
             <h1>Restaurants</h1>
             <a href="#" class="card">
@@ -73,8 +76,8 @@
                         <p class="card__content__description">Charonne</p>
                     </div>
                     <div class="card__heart">
-                        <input type="checkbox" id="heart" class="hidden-radio" name="heart">
-                        <label for="heart" class="menu__btn">
+                        <input type="checkbox" id="heart2" class="hidden-radio" name="heart">
+                        <label for="heart2" class="menu__btn">
                             <i class="far fa-heart fa"></i>
                             <i class="fas fa-heart fa"></i>
                         </label>
