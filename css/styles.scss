@@ -1,4 +1,6 @@
+@import "__loader.scss";
 @import "_header.scss";
+@import "_restau.scss";
 @import "_footer.scss";
 
 
@@ -6,11 +8,21 @@ body {
     max-width: 768px;
     font-family: Roboto;
     margin: 0;
+    padding: 0;
 }
 
 .main {
-    padding-top: 4%;
     width: 100%;
+    z-index: 1;
+}
+
+img {
+    max-width: 100%;
+    overflow: clip;
+}
+
+ul {
+    padding: 0;
 }
 
 a {
@@ -70,8 +82,10 @@ li {
 .function__main {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10%;
 
     .function__title {
+        margin-left: 8%;
         font-size: 24px;
         font-weight: 700;
     }
@@ -85,17 +99,16 @@ li {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 4%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 4% 6% 0% 10%;
     box-shadow: 0px 4px 15px 0px #00000026;
     background: #F6F6F6;
     border-radius: 20px;
     min-height: 70px;
 
     .function__card__number {
-        position: absolute;
-        top: 30%;
-        left: -2%;
+        transform: translateX(-12px);
         text-align: center;
         color: white;
         line-height: 25px;
@@ -103,6 +116,10 @@ li {
         height: 25px;
         border-radius: 50%;
         background: #9356DC;
+    }
+    
+    .function__card__content__icon {
+        margin: 0 15px 0 6px;
     }
 
     
@@ -116,8 +133,10 @@ li {
     align-items: center;
     box-sizing: border-box;
     background: #F3F3F3;
+    padding: 10% 0% 14% 0%;
     
     .card {
+        position: relative;
         width: 90%;
         margin-top: 4%;
         height: 241px;
@@ -130,6 +149,17 @@ li {
             border-radius: 15px 15px 0 0;
             object-fit: cover;
             height: 70%;
+        }
+
+        .card__badge__new {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 6px;
+            background: #99E2D0;
+            color: #008766;
+            font-size: 14px;
+            font-weight: 500;
         }
 
     }
@@ -180,9 +210,7 @@ li {
     display: none;
 }
 
-#ht2 {
-    display: none;
-}
+
 
 .hidden-radio {
     display: none;
