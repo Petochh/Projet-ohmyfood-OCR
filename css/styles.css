@@ -130,7 +130,7 @@ li {
 .function__card .function__card__number {
   position: absolute;
   top: 30%;
-  left: -5%;
+  left: -2%;
   text-align: center;
   color: white;
   line-height: 25px;
@@ -138,11 +138,6 @@ li {
   height: 25px;
   border-radius: 50%;
   background: #9356DC;
-}
-.function__card .tets {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 /* liste des restaurants */
@@ -181,6 +176,11 @@ li {
 }
 .card__content .card__text .card__content__description {
   margin: 0%;
+}
+
+.menu__like {
+  position: relative;
+  display: inline-block;
 }
 
 /* Cacher l'icône remplie par défaut */

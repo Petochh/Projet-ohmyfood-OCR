@@ -95,7 +95,7 @@ li {
     .function__card__number {
         position: absolute;
         top: 30%;
-        left: -5%;
+        left: -2%;
         text-align: center;
         color: white;
         line-height: 25px;
@@ -105,11 +105,7 @@ li {
         background: #9356DC;
     }
 
-    .tets {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+    
 }
 
 
@@ -156,6 +152,12 @@ li {
             margin: 0%;
         }
     }
+
+}
+
+.menu__like {
+    position: relative;
+    display: inline-block;
 
 }
 
