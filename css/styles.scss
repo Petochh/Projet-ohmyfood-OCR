@@ -56,8 +56,8 @@ li {
     
     .info__head__button {
         border: none;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+        line-height: 50px;
         color: #F3F3F3;
         font-weight: 500;
         font-size: 16px;
@@ -76,7 +76,6 @@ li {
         }
     }
 }
-
 
 /* fonctionnement de l'application */
 .function__main {
@@ -125,6 +124,13 @@ li {
     
 }
 
+.icon__gray {
+    color: gray;
+}
+
+.icon__purple {
+    color: #9356DC;
+}
 
 /* liste des restaurants */
 .restaurant__container {
@@ -199,6 +205,9 @@ li {
 /* Lorsque la case à cocher (input) est cochée, changez l'apparence de l'icône */
 .hidden-radio:checked + .menu__btn i.fas.fa-heart {
     display: inline;
+    background-image: linear-gradient(to top, #FF79DA, #9356DC);
+    background-clip: text;
+    color: transparent;
 }
 
 /* Cacher l'icône vide lorsque la case à cocher (input) est cochée */
