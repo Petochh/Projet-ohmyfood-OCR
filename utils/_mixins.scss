@@ -1,0 +1,29 @@
+@mixin box-shadow {
+    box-shadow: 0px 4px 10px 0px #00000040;
+}
+
+@mixin box-shadow-hover {
+    box-shadow: 0px 6px 14px 0px #00000040;
+}
+
+@mixin button {
+    border: none;
+    text-align: center;
+    line-height: 50px;
+    color: $color-background;
+    font-weight: 500;
+    font-size: 16px;
+    @include box-shadow;
+    height: 50px;
+    width: 60%;
+    border-radius: 25px;
+    background: linear-gradient(to top, $color-primary, $color-secondary);
+    opacity: 1;
+    transition: opacity 250ms, transform 250ms ease-in-out;
+
+    &:hover {
+        @include box-shadow-hover;
+        opacity: 0.8;
+        transition: all 250ms ease-in-out;
+    }
+}

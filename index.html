@@ -16,8 +16,7 @@
 <body>
     <!-- Loader -->
     <div class="loader__container">
-        <div class="spiner">
-        </div>
+        <div class="spiner"></div>
     </div>
     
     <div class="main">
@@ -26,11 +25,11 @@
         <header class="head__container">
             <h1 class="head__logo">ohmyfood</h1>
             <nav class="location__point">
-                <form class="location__form">
+                <form class="location__point__form">
                     <label for="city">
-                        <i class="fa-solid fa-location-dot location__icons"></i>
+                        <i class="fa-solid fa-location-dot location__point__form__icon"></i>
                     </label>
-                    <input class="location__city" placeholder="Paris, Belleville" name="city"></input>
+                    <input class="location__point__form__text" placeholder="Paris, Belleville" name="city"></input>
                 </form>
             </nav>
         </header>
@@ -66,7 +65,7 @@
 
         <!-- restaurants card -->
         <section class="restaurant__container">
-            <h1 id="restaurant__title">Restaurants</h1>
+                <h1 class="restaurant__title" id="restaurant__title">Restaurants</h1>
 
             <!-- La palette du gout -->
             <a href="./restaurants/la_palette_du_gout.html" class="card">
@@ -112,7 +111,7 @@
                 <div class="card__content">
                     <div class="card__text">
                         <h3 class="card__content__title">À la française</h3>
-                        <p>Cité Rouge</p>
+                        <p class="card__content__description">Cité Rouge</p>
                     </div>
                     <div class="card__heart">
                         <input type="checkbox" id="heart3" class="hidden-radio" name="heart">
@@ -130,13 +129,13 @@
                 <div class="card__content">
                     <div class="card__text">
                         <h3 class="card__content__title">Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
+                        <p class="card__content__description">Folie-Méricourt</p>
                     </div>
                     <div class="card__heart">
                         <input type="checkbox" id="heart4" class="hidden-radio" name="heart">
                         <label for="heart4" class="menu__btn">
                             <i class="fa-2x far fa-heart fa"></i>
-                            <i class="fa-2x fas fa-heart fa"></i>
+                            <i class="fa-2x fas fa-heart fa heart__backgroud"></i>
                         </label>
                     </div>
                 </div>
@@ -146,10 +145,10 @@
         <!-- pied de page -->
         <footer>
             <h3>ohmyfood</h3>
-            <a href="#">Proposer un restaurant</a>
-            <a href="#">Devenir partenaire</a>
+            <a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a>
+            <a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a>
             <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
+            <a href="mailto:adresse@example.com">Contact</a>
         </footer>
     </div>
 </body>

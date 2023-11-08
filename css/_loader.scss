@@ -1,7 +1,7 @@
 .loader__container {
     display: flex;
     animation: test 2s both;
-    background-color: white;
+    background-color: $color-white;
     opacity: 1;
     position: fixed;
     height: 100%;
@@ -16,25 +16,11 @@
     height: 50px;
     justify-content: center;
     align-items: center;
-    border: 3px solid magenta;
+    border: 3px solid $color-secondary;
     border-top: 3px solid transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
 
-@keyframes test {
-    100% {
-        display: none;
-    }
-}
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}

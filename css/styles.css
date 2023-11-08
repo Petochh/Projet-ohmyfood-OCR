@@ -1,8 +1,31 @@
 @charset "UTF-8";
+@keyframes test {
+  100% {
+    display: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .loader__container {
   display: flex;
   animation: test 2s both;
-  background-color: white;
+  background-color: #FFFFFF;
   opacity: 1;
   position: fixed;
   height: 100%;
@@ -17,25 +40,12 @@
   height: 50px;
   justify-content: center;
   align-items: center;
-  border: 3px solid magenta;
+  border: 3px solid #FF79DA;
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
-@keyframes test {
-  100% {
-    display: none;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 /* header */
 .head__container {
   position: relative;
@@ -44,12 +54,11 @@
   align-items: center;
 }
 .head__container .head__logo {
-  z-index: 2;
   width: 100%;
   height: 63px;
   text-align: center;
   font-family: "Shrikhand";
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   margin: 0;
 }
 .head__container .location__point {
@@ -61,16 +70,26 @@
   height: 50px;
   width: 100%;
 }
-.head__container .location__point .location__city {
+.head__container .location__point__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.head__container .location__point__form__text {
   background: #EAEAEA;
   border: none;
   font-weight: 500;
   font-size: 16px;
-  height: 25px;
+  text-align: center;
+  width: 35%;
+}
+
+.restaurant__page .main {
+  background: #F3F3F3;
 }
 
 .return__button {
-  z-index: 3;
   position: absolute;
   width: 30px;
   height: 30px;
@@ -97,13 +116,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  animation: fade-in 0.5s forwards;
 }
 .menu__title__text {
   font-size: 28px;
   font-weight: 400;
   font-family: Shrikhand;
-  line-height: 40.82px;
-  margin: 4% 12% 0 4%;
+  margin: 4% 6% 4% 4%;
 }
 
 .menu__enter {
@@ -118,6 +138,7 @@
   padding-bottom: 6px;
   border-bottom: 3px solid #99E2D0;
   max-width: 30px;
+  animation: fade-in 1s forwards;
 }
 .menu__enter__card {
   display: flex;
@@ -129,17 +150,91 @@
   margin: 2%;
   position: relative;
   border-radius: 15px;
+  opacity: 0;
+  animation: fade-in 1.5s forwards;
+}
+.menu__enter__card:nth-child(odd) { /* Pair */
+  animation-delay: 0.4s;
+}
+.menu__enter__card:nth-child(even) { /* Impair */
+  animation-delay: 0.8s;
+}
+.menu__enter__card__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateX(60px);
+}
+.menu__enter__card__content:hover {
+  width: 80%;
 }
 .menu__enter__card__name {
   margin: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
 }
 .menu__enter__card__description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
   margin: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__enter__card__price {
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu__enter__card__order {
   position: absolute;
-  right: 16px;
-  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.menu__enter__card__order {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: 0.5s ease-in-out;
+}
+
+.menu__enter__card:hover .menu__enter__card__order {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.command {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.command__button {
+  margin-top: 4%;
+  border: none;
+  text-align: center;
+  line-height: 50px;
+  color: #F3F3F3;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  height: 50px;
+  width: 60%;
+  border-radius: 25px;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  opacity: 1;
+  transition: opacity 250ms, transform 250ms ease-in-out;
+}
+.command__button:hover {
+  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2509803922);
+  opacity: 0.8;
+  transition: all 250ms ease-in-out;
 }
 
 footer {
@@ -147,10 +242,12 @@ footer {
   display: flex;
   flex-direction: column;
   background: #353535;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 footer h3 {
   font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
 }
 footer a {
   margin-top: 1%;
@@ -168,7 +265,6 @@ body {
 
 .main {
   width: 100%;
-  z-index: 1;
 }
 
 img {
@@ -223,7 +319,7 @@ li {
   transition: opacity 250ms, transform 250ms ease-in-out;
 }
 .info__head .info__head__button:hover {
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2509803922);
   opacity: 0.8;
   transition: all 250ms ease-in-out;
 }
@@ -250,9 +346,9 @@ li {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 4% 6% 0% 10%;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
-  background: #F6F6F6;
+  margin: 8% 6% 0% 10%;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  background: #F3F3F3;
   border-radius: 20px;
   min-height: 70px;
 }
@@ -271,7 +367,7 @@ li {
 }
 
 .icon__gray {
-  color: gray;
+  color: #353535;
 }
 
 .icon__purple {
@@ -287,23 +383,26 @@ li {
   background: #F3F3F3;
   padding: 10% 0% 14% 0%;
 }
+.restaurant__container .restaurant__title {
+  width: 90%;
+}
 .restaurant__container .card {
   position: relative;
   width: 90%;
-  margin-top: 4%;
+  margin-top: 6%;
   height: 241px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.restaurant__container .card .card__content__img {
+.restaurant__container .card__content__img {
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
   height: 70%;
 }
-.restaurant__container .card .card__badge__new {
+.restaurant__container .card__badge__new {
   position: absolute;
   top: 10px;
   right: 10px;

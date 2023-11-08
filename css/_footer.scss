@@ -2,10 +2,12 @@ footer {
     padding: 0% 0% 4% 2%;
     display: flex;
     flex-direction: column;
-    background: #353535;
-    color: #ffffff;
+    background: $color-dark_grey;
+    color: $color-white;
     h3 {
         font-family: Shrikhand;
+        font-size: 18px;
+        font-weight: 400;
     }
     a {
         margin-top: 1%;

@@ -1,5 +1,8 @@
+.restaurant__page .main {
+    background: $color-background;
+} 
+
 .return__button {
-    z-index: 3;
     position: absolute;
     width: 30px;
     height: 30px;
@@ -27,20 +30,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+
+    animation: fade-in 0.5s forwards;
 
     &__text {
         font-size: 28px;
         font-weight: 400;
         font-family: Shrikhand;
-        line-height: 40.82px;
-        margin: 4% 12% 0 4%;
+        margin: 4% 6% 4% 4%;
     }
+
 }
 
 .menu__enter {
     position: relative;
     display: flex;
     flex-direction: column;
+
 
     &__title {
         font-size: 16px;
@@ -49,6 +56,8 @@
         padding-bottom: 6px;
         border-bottom: 3px solid #99E2D0;
         max-width: 30px;
+
+        animation: fade-in 1s forwards;
     }
     
     &__card {
@@ -62,19 +71,82 @@
         position: relative;
         border-radius: 15px;
 
+        opacity: 0;
+        animation: fade-in 1.5s forwards;
+        
+        &:nth-child(odd) { /* Pair */
+            animation-delay: 0.4s;
+        }
+        
+        &:nth-child(even) { /* Impair */
+            animation-delay: 0.8s;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transform: translateX(60px);
+
+            &:hover {
+                width: 80%;
+            }
+        }
+
+
         &__name {
             margin: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
         }
 
         &__description {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
             margin: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &__price {
-            position: absolute;
-            right: 16px;
-            bottom: 0;
+            font-weight: 700;
+            font-size: 15px;
         }
         
+        &__order {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 60px;
+            border-radius: 0 15px 15px 0;
+            background-color: $color-tertiary;
+            color: $color-white;
+            text-align: center;
+        }
     }
+}
+
+.menu__enter__card__order {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: 0.5s ease-in-out;
+}
+
+.menu__enter__card:hover  .menu__enter__card__order {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.command {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.command__button {
+    margin-top: 4%;
+    @include button;
 }
