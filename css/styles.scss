@@ -7,7 +7,8 @@
 @import "_footer.scss";
 
 body {
-    max-width: 768px;
+    display: flex;
+    justify-content: center;
     font-family: Roboto;
     margin: 0;
     padding: 0;
@@ -15,6 +16,8 @@ body {
 
 .main {
     width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
 }
 
 img {
@@ -43,19 +46,27 @@ li {
     background: $color-background;
     padding-bottom: 10%;
 
-    .info__head__title {
+    @include desktop {
+        padding-bottom: 2%;
+    }
+
+    &__title {
         font-size: 24px;
         font-weight: 700;
         text-align: center;
+
+        @include desktop {
+            font-size: 40px;
+        }
     }
     
-    .info__head__text {
+    &__text {
         font-size: 18px;
         font-weight: 300;
         text-align: center;
     }
     
-    .info__head__button {
+    &__button {
         @include button;
     }
 }
@@ -66,15 +77,32 @@ li {
     flex-direction: column;
     padding-bottom: 10%;
 
+    @include desktop {
+        padding-bottom: 0;
+    }
+    
     .function__title {
         margin-left: 8%;
         font-size: 24px;
         font-weight: 700;
+
+        @include desktop {
+            width: 35%;
+            margin: 2%;
+            text-align: center;
+        }
     }
+
     .function__container {
         display: flex;
         flex-direction: column;
-    
+        
+        @include desktop {
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        
     }
 }
 .function__card {
@@ -88,6 +116,14 @@ li {
     background: $color-background;
     border-radius: 20px;
     min-height: 70px;
+    
+    @include desktop {
+        margin: 2%;
+        padding-right: 1%;
+        min-width: 22%;
+    }
+    
+
 
     .function__card__number {
         transform: translateX(-12px);
@@ -98,6 +134,7 @@ li {
         height: 25px;
         border-radius: 50%;
         background: $color-primary;
+
     }
     
     .function__card__content__icon {
@@ -124,8 +161,19 @@ li {
     background: $color-background;
     padding: 10% 0% 14% 0%;
 
+    @include desktop {
+        padding: 0% 0% 4% 0%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .restaurant__title {
         width: 90%;
+
+        @include desktop {
+            width: 75%;
+        }
     }
     
     .card {
@@ -137,6 +185,11 @@ li {
         display: flex;
         flex-direction: column;
         @include box-shadow;
+
+        @include desktop {
+            margin: 2%;
+            width: 35%;
+        }
         
         &__content__img {
             border-radius: 15px 15px 0 0;

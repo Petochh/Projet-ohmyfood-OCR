@@ -16,6 +16,7 @@
     @include box-shadow;
     height: 50px;
     width: 60%;
+    max-width: 218px;
     border-radius: 25px;
     background: linear-gradient(to top, $color-primary, $color-secondary);
     opacity: 1;
@@ -25,5 +26,17 @@
         @include box-shadow-hover;
         opacity: 0.8;
         transition: all 250ms ease-in-out;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
     }
 }
