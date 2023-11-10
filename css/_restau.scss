@@ -4,7 +4,11 @@
     @include desktop {
         background: $color-white;
     }
-} 
+}
+
+.restaurant__page .foot__container {
+    margin-top: -40px;
+}
 
 .return__button {
     position: absolute;

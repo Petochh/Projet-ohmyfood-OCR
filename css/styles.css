@@ -97,6 +97,10 @@
   }
 }
 
+.restaurant__page .foot__container {
+  margin-top: -40px;
+}
+
 .return__button {
   position: absolute;
   width: 30px;
@@ -444,7 +448,7 @@ li {
 @media screen and (min-width: 1024px) {
   .function__main .function__title {
     width: 35%;
-    margin: 2%;
+    margin: 20px 0 0 0;
     text-align: center;
   }
 }
@@ -466,7 +470,7 @@ li {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 8% 6% 0% 10%;
+  margin: 30px 6% 0% 10%;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   background: #F3F3F3;
   border-radius: 20px;
