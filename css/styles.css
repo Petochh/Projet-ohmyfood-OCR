@@ -17,6 +17,14 @@
     transform: rotate(360deg);
   }
 }
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -56,15 +64,40 @@
   z-index: 9;
 }
 
-.spiner {
+.spiner__one {
   width: 50px;
+  position: absolute;
   height: 50px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #9356DC;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spiner__two {
+  position: absolute;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   border: 3px solid #FF79DA;
   border-top: 3px solid transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin2 1.5s linear infinite;
+}
+
+.spiner__three {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #99E2D0;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
 }
 
 /* header */
@@ -183,6 +216,7 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 2%;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1024px) {
   .cards__menu {
@@ -276,7 +310,7 @@
 }
 
 .enter__box:checked ~ .cards__menu__card__order {
-  width: 59px;
+  width: 60px;
   transform: translateX(0);
 }
 

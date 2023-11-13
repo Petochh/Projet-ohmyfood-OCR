@@ -11,15 +11,40 @@
     z-index: 9;
 }
 
-.spiner {
+.spiner__one {
     width: 50px;
+    position: absolute;
     height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $color-primary;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.spiner__two {
+    position: absolute;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     border: 3px solid $color-secondary;
     border-top: 3px solid transparent;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin2 1.5s linear infinite;
+}
+
+.spiner__three {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $color-tertiary;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
 }
 
 
