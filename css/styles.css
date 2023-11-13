@@ -35,11 +35,17 @@
     opacity: 1;
   }
 }
+@keyframes heart-unlike {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .loader__container {
   display: flex;
   animation: test 2s both;
-  -webkit-animation: test 2s both;
-  -moz-animation: test 2s both;
   background-color: #FFFFFF;
   opacity: 1;
   position: fixed;
@@ -59,8 +65,6 @@
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  -webkit-animation: spin 1s linear infinite;
-  -moz-animation: spin 1s linear infinite;
 }
 
 /* header */
@@ -614,11 +618,15 @@ li {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  animation: heart-like 1s forwards;
+  animation: heart-like 0.5s forwards;
 }
 
 .hidden-radio:checked + .menu__btn i.far.fa-heart {
   display: none;
+}
+
+.hidden-radio:not(:checked) + .menu__btn i.far.fa-heart {
+  animation: heart-unlike 0.5s forwards;
 }
 
 #heart {

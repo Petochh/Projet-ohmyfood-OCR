@@ -246,11 +246,15 @@ li {
     background-image: linear-gradient(to top, $color-secondary, $color-primary);
     background-clip: text;
     color: transparent;
-    animation: heart-like 1s forwards;
+    animation: heart-like 0.5s forwards;
 }
 
 .hidden-radio:checked + .menu__btn i.far.fa-heart {
     display: none;
+}
+
+.hidden-radio:not(:checked) + .menu__btn i.far.fa-heart {
+    animation: heart-unlike 0.5s forwards;
 }
 
 #heart {
