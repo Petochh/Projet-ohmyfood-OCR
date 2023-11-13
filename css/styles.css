@@ -1,7 +1,12 @@
-@charset "UTF-8";
 @keyframes test {
+  0%, 99% {
+    z-index: 10;
+    opacity: 1;
+  }
   100% {
     display: none;
+    opacity: 0;
+    z-index: -10;
   }
 }
 @keyframes spin {
@@ -22,9 +27,19 @@
     transform: translateX(0);
   }
 }
+@keyframes heart-like {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .loader__container {
   display: flex;
   animation: test 2s both;
+  -webkit-animation: test 2s both;
+  -moz-animation: test 2s both;
   background-color: #FFFFFF;
   opacity: 1;
   position: fixed;
@@ -44,6 +59,8 @@
   border-top: 3px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
 }
 
 /* header */
@@ -52,23 +69,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .head__container .head__logo {
   width: 100%;
   height: 63px;
   text-align: center;
   font-family: "Shrikhand";
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border-color: transparent;
   margin: 0;
 }
 .head__container .location__point {
   background: #EAEAEA;
+  box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   justify-content: center;
   font-weight: 500;
   font-size: 16px;
   height: 50px;
-  width: 100%;
+  width: 110%;
 }
 .head__container .location__point__form {
   display: flex;
@@ -86,6 +105,9 @@
   font-size: 16px;
   text-align: center;
   width: 109px;
+}
+.head__container .location__point__form__text:focus {
+  outline: none;
 }
 
 .restaurant__page .main {
@@ -125,7 +147,7 @@
   border-radius: 40px 40px 0 0;
   background: #F6F6F6;
   transform: translateY(-40px);
-  padding-top: 4%;
+  padding: 4% 10px 0 10px;
   display: flex;
   flex-direction: column;
 }
@@ -195,7 +217,7 @@
   transition: width 0.5s ease-in-out;
 }
 .cards__menu__card__content__menu {
-  width: 88%;
+  width: 86%;
   margin: 6px;
   transition: width 1s;
 }
@@ -221,7 +243,7 @@
   justify-content: end;
   align-items: end;
   padding-right: 10px;
-  width: 10%;
+  width: 13%;
   font-weight: 700;
   font-size: 15px;
 }
@@ -255,7 +277,7 @@
 }
 
 .enter__box:checked ~ .cards__menu__card__labbel .cards__menu__card__content .cards__menu__card__content__menu {
-  width: 60%;
+  width: 55%;
 }
 
 /*.cards__menu__card:hover .cards__menu__card__order {
@@ -582,21 +604,19 @@ li {
   display: inline-block;
 }
 
-/* Cacher l'icône remplie par défaut */
 .menu__btn i.fas.fa-heart {
   display: none;
 }
 
-/* Lorsque la case à cocher (input) est cochée, changez l'apparence de l'icône */
 .hidden-radio:checked + .menu__btn i.fas.fa-heart {
   display: inline;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  animation: heart-like 1s forwards;
 }
 
-/* Cacher l'icône vide lorsque la case à cocher (input) est cochée */
 .hidden-radio:checked + .menu__btn i.far.fa-heart {
   display: none;
 }

@@ -237,20 +237,18 @@ li {
 
 }
 
-/* Cacher l'icône remplie par défaut */
 .menu__btn i.fas.fa-heart {
     display: none;
 }
 
-/* Lorsque la case à cocher (input) est cochée, changez l'apparence de l'icône */
 .hidden-radio:checked + .menu__btn i.fas.fa-heart {
     display: inline;
     background-image: linear-gradient(to top, $color-secondary, $color-primary);
     background-clip: text;
     color: transparent;
+    animation: heart-like 1s forwards;
 }
 
-/* Cacher l'icône vide lorsque la case à cocher (input) est cochée */
 .hidden-radio:checked + .menu__btn i.far.fa-heart {
     display: none;
 }
