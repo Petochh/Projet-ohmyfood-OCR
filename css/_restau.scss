@@ -115,7 +115,7 @@
                 &__text {
                     margin: 5px;
                     font-weight: 500;
-                    font-size: 18px;
+                    font-size: 17px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -175,19 +175,12 @@
 }
 
 .enter__box:checked ~ .cards__menu__card__labbel .cards__menu__card__content .cards__menu__card__content__menu {
-    width: 50%;
+    width: 60%;
 }
 .enter__box:checked ~ .cards__menu__card__order {
     width: 60px;
 }
 
-
-/*.cards__menu__card:hover .cards__menu__card__order {
-    opacity: 1;
-    width: 60px;
-    transform: translateX(0);
-}
-*/
 .command {
     display: flex;
     justify-content: center;
