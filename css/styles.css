@@ -255,8 +255,8 @@
   transition: width 0.5s ease-in-out;
 }
 .cards__menu__card__content__menu {
-  width: 86%;
-  margin: 6px;
+  width: 85%;
+  margin: 6px 2px;
   transition: width 1s;
 }
 .cards__menu__card__content__menu__text {
@@ -269,7 +269,7 @@
 }
 .cards__menu__card__content__menu__description {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 14px;
   margin: 5px;
   white-space: nowrap;
   overflow: hidden;
@@ -281,7 +281,7 @@
   justify-content: end;
   align-items: end;
   padding-right: 10px;
-  width: 13%;
+  width: 14%;
   font-weight: 700;
   font-size: 15px;
 }
@@ -309,13 +309,12 @@
   display: none;
 }
 
-.enter__box:checked ~ .cards__menu__card__order {
-  width: 60px;
-  transform: translateX(0);
+.enter__box:checked ~ .cards__menu__card__labbel .cards__menu__card__content .cards__menu__card__content__menu {
+  width: 50%;
 }
 
-.enter__box:checked ~ .cards__menu__card__labbel .cards__menu__card__content .cards__menu__card__content__menu {
-  width: 55%;
+.enter__box:checked ~ .cards__menu__card__order {
+  width: 60px;
 }
 
 /*.cards__menu__card:hover .cards__menu__card__order {
