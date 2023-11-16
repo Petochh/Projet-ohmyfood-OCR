@@ -1,4 +1,4 @@
-@keyframes test {
+@keyframes loader_dispaire {
   0%, 99% {
     z-index: 10;
     opacity: 1;
@@ -39,7 +39,7 @@
   0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -47,13 +47,13 @@
   0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 .loader__container {
   display: flex;
-  animation: test 2s both;
+  animation: loader_dispaire 2s both;
   background-color: #FFFFFF;
   opacity: 1;
   position: fixed;
