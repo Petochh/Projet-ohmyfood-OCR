@@ -234,6 +234,7 @@
   animation: fade-in 1s forwards;
 }
 .cards__menu__card {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   background: #FFFFFF;
@@ -303,14 +304,17 @@
 
 .cards__menu__card__labbel {
   width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
 }
 
 .enter__box {
   display: none;
 }
 
-.enter__box:checked ~ .cards__menu__card__labbel .cards__menu__card__content .cards__menu__card__content__menu {
-  width: 60%;
+.enter__box:checked ~ .cards__menu__card__content .cards__menu__card__content__menu {
+  width: 55%;
 }
 
 .enter__box:checked ~ .cards__menu__card__order {
@@ -582,6 +586,16 @@ li {
   .restaurant__container .restaurant__title {
     width: 75%;
   }
+}
+.restaurant__container .card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.restaurant__container .card__heart {
+  z-index: 2;
 }
 .restaurant__container .card {
   position: relative;
