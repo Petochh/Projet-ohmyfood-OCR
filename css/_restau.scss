@@ -116,7 +116,7 @@
                 &__text {
                     margin: 5px;
                     font-weight: 500;
-                    font-size: 17px;
+                    font-size: 16px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -124,7 +124,7 @@
 
                 &__description {
                     font-weight: 300;
-                    font-size: 14px;
+                    font-size: 13px;
                     margin: 5px;
                     white-space: nowrap;
                     overflow: hidden;
@@ -179,7 +179,7 @@
 }
 
 .enter__box:checked ~ .cards__menu__card__content .cards__menu__card__content__menu {
-    width: 55%;
+    width: 70%;
 }
 .enter__box:checked ~ .cards__menu__card__order {
     width: 60px;
