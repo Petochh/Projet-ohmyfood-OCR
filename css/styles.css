@@ -308,6 +308,9 @@
   z-index: 1;
   position: absolute;
 }
+.cards__menu__card__labbel:hover {
+  cursor: pointer;
+}
 
 .enter__box {
   display: none;
